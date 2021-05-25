@@ -7,6 +7,7 @@ tree = et.parse(os.path.abspath('config.xml'))
 root = tree.getroot()
 
 
+# TODO Проверка корректности адреса, наличие файла
 def copy_file(path_from: str, path_to: str):
     try:
         copy(path_from, path_to)
