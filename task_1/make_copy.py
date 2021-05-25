@@ -19,7 +19,6 @@ for child in root:
     param = child.attrib
     path_from = os.path.join(param['source_path'], param['file_name'])
     path_to = param['destination_path']
-    # TODO Как пропустить данные, которые для другой ОС
     if os.name == 'posix' and param['source_path'].startswith('/'):
         copy_file(path_from, path_to)
     elif os.name == 'nt' and param['source_path'][0].isalpha():
