@@ -6,19 +6,23 @@ import xml.etree.ElementTree as et
 tree = et.parse(os.path.abspath('config.xml'))
 root = tree.getroot()
 
+
+def copy_file(path_from: str, path_to: str):
+    try:
+        copy(path_from, path_to)
+        return print(f'Файл {path_from} скопирован ->> {path_to}')
+    except PermissionError as err:
+        return print(f'У сожалению у вас не достаточно прав - {err}')
+
+
 for child in root:
-    tag = child.tag, 
     param = child.attrib
-    if os.name == 'posix' or param['source_path'].startswith('/'):
-        print('Ты делаешь копию для линукса')
+    path_from = os.path.join(param['source_path'], param['file_name'])
+    path_to = param['destination_path']
+    # TODO Как пропустить данные, которые для другой ОС
+    if os.name == 'posix' and param['source_path'].startswith('/'):
+        copy_file(path_from, path_to)
+    elif os.name == 'nt' and param['source_path'][0].isalpha():
+        copy_file(path_from, path_to)
     else:
-        print('Ты в винде')
-        # TODO Сделать проверку наличия файла
-        # TODO Вынести в отдельную функцию сам способ копирования  
-        try:
-            full_path = os.path.join(param['source_path'], param['file_name'])
-            path_to_copy = os.path.join(param['destination_path'])
-            copy(full_path, path_to_copy)
-            print('Файл успешно скопирован')
-        except PermissionError as err:
-            print(err, "Скрипт запущен без прав")
+        continue
