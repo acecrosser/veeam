@@ -33,6 +33,7 @@
 Активируйте виртаульное окружение:
 
 `cd env\Scripts\ and activate` - Windows
+
 `source env/bin/activate ` - Linux
 
 Установите требуемую зависимость:
@@ -50,8 +51,14 @@
 
 Доступные методы:
 
-`execute`, `run`, `clean_up`
+`execute`
+
+`run`
+
+`clean_up`
 
 Доступные атрибуты:
 
-`tc_id`, `name`
+`tc_id`
+
+`name`
