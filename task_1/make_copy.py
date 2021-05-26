@@ -1,6 +1,6 @@
 import os
-from shutil import copy, copytree
 import xml.etree.ElementTree as et
+from shutil import copy, copytree
 
 
 def copy_file(path_from: str, path_to: str):
@@ -15,7 +15,7 @@ def copy_file(path_from: str, path_to: str):
             copy(path_from, path_to)
             return print(f'[ОК] Файл {path_from} скопирован ->> {path_to}')
         except PermissionError as err:
-            return print(f'[PERMISSION] У сожалению у вас не достаточно прав. {err}')
+            return print(f'[PERMISSION] К сожалению у вас недостаточно прав. Запустите скрипт от имени администратора.\n{err}')
 
 
 def parameter_check():
@@ -35,7 +35,7 @@ def parameter_check():
                 elif os.name == 'nt' and param['source_path'][0].isalpha():
                     copy_file(path_from, path_to)
                 else:
-                    print('[OS FAILD] Ваша ОС не соответсвует требуемой')
+                    print('[OS FAILD] Ваша ОС не соответсвует указанной в конфигурации')
                     continue
             except KeyError as err:
                 print('[ERROR] Конфигурация не соответсвует требованиям')
