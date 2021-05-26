@@ -25,13 +25,18 @@
         file_name="12312.pub"    
     />
     <full
-        source_path="C:\Users\shilke\PycharmProjects"
+        source_pah="C:\Users\shilke\PycharmProjects"
         destination_path="C:\Users\shilke\PycharmProjects\new\"
-        file_name="12312.pub"    
+        file_nme="12312.pub"    
     />
     <full
         source_path="/var/log/"
         destination_path="/etc"
         file_name="kern.log"    
+    />
+    <file
+        source_path="C:\Users\shilke\PycharmProjects"
+        destination_path="C:\Users\shilke\PycharmProjects\new\"
+        file_name="12312.pub"    
     />
 </config>
