@@ -24,12 +24,12 @@
         destination_path="C:\Users\shilke\PycharmProjects\new\"
         file_name="12312.pub"    
     />
-    <full
+    <file
         source_pah="C:\Users\shilke\PycharmProjects"
         destination_path="C:\Users\shilke\PycharmProjects\new\"
         file_nme="12312.pub"    
     />
-    <full
+    <file
         source_path="/var/log/"
         destination_path="/etc"
         file_name="kern.log"    
