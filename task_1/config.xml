@@ -16,7 +16,17 @@
     />
     <file
         source_path="C:\Users\shilke\PycharmProjects"
-        destination_path="C:\Users\shilke\PycharmProjects\new\"
+        destination_path="C:\Users\shilke\PycharmProjects\new23\"
         file_name="acecrosser_ssh_rser.pub"    
+    />
+    <file
+        source_path="C:\Users\shilke\PycharmProjects"
+        destination_path="C:\Users\shilke\PycharmProjects\new\"
+        file_name="12312.pub"    
+    />
+    <full
+        source_pah="C:\Users\shilke\PycharmProjects"
+        destination_path="C:\Users\shilke\PycharmProjects\new\"
+        file_nae="12312.pub"    
     />
 </config>
