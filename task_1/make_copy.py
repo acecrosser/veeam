@@ -3,7 +3,7 @@ import xml.etree.ElementTree as et
 from shutil import copy, copytree
 
 
-def copy_file(path_from: str, path_to: str):
+def copy_file(path_from: str, path_to: str) -> str:
     if not os.path.exists(path_from):
         print('[FAILD] Файл, который вы хотите скопировать - отсутсвует')
     elif not os.path.exists(path_to):
@@ -18,7 +18,7 @@ def copy_file(path_from: str, path_to: str):
             return print(f'[PERMISSION] К сожалению у вас недостаточно прав. Запустите скрипт от имени администратора.\n{err}')
 
 
-def parameter_check():
+def parameter_check() -> str:
 
     try:
         tree = et.parse(os.path.abspath('config.xml'))
