@@ -1,7 +1,7 @@
 ![python veriosn](https://img.shields.io/badge/python-3.7%2B-blue)
 ![](https://img.shields.io/badge/test-task-red)
 
-## Решение тестового задания на должность "QA Automation Engineer"
+## Решение тестового задания на должность "Junior Developer in QA"
 
 **Задачи для самостоятельного выполнения:**
 
